@@ -21,7 +21,7 @@ def estado_hidratacion(consumo_ml, objetivo_ml):
     else:
         porcentaje = ((consumo_ml - objetivo_ml) / objetivo_ml) * 100
         return f"Has excedido tu objetivo en un {porcentaje:.2f}%"
-
+# donde se guarda el valor de retorno de la funcion estado_hidratacion
 
 personas = []
 
@@ -53,18 +53,17 @@ while True:
         personas.append(persona)
         
     
-        print(f"Objetivo diario: {objetivo:.2f} ml")
-        print(estado)
+        print(f"Objetivo diario: {objetivo:.2f} ml") #:.2f bien+
     
     except ValueError:
         print("Error: ingresaste un dato inválido")
     
     
-    seguir = input("¿Desea cargar otra persona? (s/n): ").lower()
-    if seguir != "s":
+    seguir = input("¿Desea cargar otra persona? (s/n): ").lower() # .lower() 
+    if seguir != "s": # != 
         break
 
-print("\n--- Resumen de personas ---")
+print("\n--- Resumen de personas ---") #\n
 
 for i, p in enumerate(personas, start=1):
     print(f"\nPersona {i}:")
